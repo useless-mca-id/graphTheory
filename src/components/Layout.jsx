@@ -1,5 +1,5 @@
 import { Outlet, NavLink, useLocation } from 'react-router-dom'
-import { Home, Map, Navigation, Activity, Sun, Moon, Menu, X } from 'lucide-react'
+import { Home, Map, Navigation, Activity, PenTool, Sun, Moon, Menu, X } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import useGraphStore from '../store/useGraphStore'
 
@@ -8,6 +8,7 @@ const navItems = [
   { path: '/map',        label: 'Campus Map',     icon: Map },
   { path: '/route',      label: 'Route Finder',   icon: Navigation },
   { path: '/simulation', label: 'Simulation',     icon: Activity },
+  { path: '/editor',     label: 'Graph Editor',   icon: PenTool },
 ]
 
 const pageNames = {
@@ -15,6 +16,7 @@ const pageNames = {
   '/map':        'Campus Map',
   '/route':      'Route Finder',
   '/simulation': 'Crowd Simulation',
+  '/editor':     'Graph Editor',
 }
 
 export default function Layout() {

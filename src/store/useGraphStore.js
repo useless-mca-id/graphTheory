@@ -98,6 +98,24 @@ const useGraphStore = create((set, get) => ({
     }))
   },
 
+  // Update node
+  updateNode: (nodeId, updates) => {
+    set(state => ({
+      nodes: state.nodes.map(n =>
+        n.id === nodeId ? { ...n, ...updates } : n
+      )
+    }))
+  },
+
+  // Update edge distance independently
+  updateEdgeDistance: (edgeId, distance) => {
+    set(state => ({
+      edges: state.edges.map(e =>
+        e.id === edgeId ? { ...e, distance: Math.max(1, Math.min(20, distance)) } : e
+      )
+    }))
+  },
+
   // Reset to initial
   resetGraph: () => {
     set({

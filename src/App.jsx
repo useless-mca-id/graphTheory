@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import CampusMap from './pages/CampusMap'
 import RouteFinder from './pages/RouteFinder'
 import Simulation from './pages/Simulation'
+import GraphEditor from './pages/GraphEditor'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/map" element={<CampusMap />} />
           <Route path="/route" element={<RouteFinder />} />
           <Route path="/simulation" element={<Simulation />} />
+          <Route path="/editor" element={<GraphEditor />} />
         </Route>
       </Routes>
     </BrowserRouter>
@@ -21,3 +23,4 @@ function App() {
 }
 
 export default App
+
